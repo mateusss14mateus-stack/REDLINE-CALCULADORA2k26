@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #7a0000, #000);
+  color: white;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  color: #ff2b2b;
+}
+
+h2 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.box label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.total {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ff2b2b;
+  color: black;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 8px;
+}
