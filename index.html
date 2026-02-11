@@ -2,33 +2,57 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Redline - Calculadora Mecânica</title>
+  <title>Redline - Mecânica</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<!-- LOGIN -->
+<div class="container" id="loginBox">
+  <h1>🔧 REDLINE</h1>
+  <h2>Login</h2>
+
+  <input id="loginUser" placeholder="Usuário">
+  <input id="loginPass" type="password" placeholder="Senha">
+
+  <button onclick="login()">Entrar</button>
+  <p id="loginMsg"></p>
+</div>
+
+<!-- CALCULADORA -->
+<div class="container hidden" id="calcBox">
   <h1>🔧 REDLINE</h1>
   <h2>Calculadora de Mecânica</h2>
 
-  <div class="box">
-    <label><input type="checkbox" value="50000"> Turbo (50K)</label>
-    <label><input type="checkbox" value="60000"> Transmissão N1 (60K)</label>
-    <label><input type="checkbox" value="80000"> Transmissão N2 (80K)</label>
-    <label><input type="checkbox" value="100000"> Transmissão N3 (100K)</label>
-
-    <label><input type="checkbox" value="20000"> Freio N1 (20K)</label>
-    <label><input type="checkbox" value="40000"> Freio N2 (40K)</label>
-    <label><input type="checkbox" value="60000"> Freio N3 (60K)</label>
-
-    <label><input type="checkbox" value="1500000"> Blindagem Full (1.5M)</label>
-    <label><input type="checkbox" value="350000"> Full Tuning (350K)</label>
-    <label><input type="checkbox" value="900000"> Remap (900K)</label>
-  </div>
+  <div id="itens"></div>
 
   <div class="total">
     Total: <span id="total">R$ 0</span>
   </div>
+
+  <button class="reset" onclick="resetar()">Resetar</button>
+  <button class="logout" onclick="logout()">Sair</button>
+</div>
+
+<!-- PAINEL ADM -->
+<div class="container admin hidden" id="adminBox">
+  <h2>⚙️ Painel ADM</h2>
+
+  <h3>Adicionar / Editar Item</h3>
+  <input id="nomeItem" placeholder="Nome do item">
+  <input id="valorItem" type="number" placeholder="Valor">
+  <button onclick="adicionarItem()">Salvar item</button>
+
+  <h3>Criar Usuário</h3>
+  <input id="novoUser" placeholder="Usuário">
+  <input id="novaPass" type="password" placeholder="Senha">
+  <select id="novoTipo">
+    <option value="user">Usuário</option>
+    <option value="adm">ADM</option>
+  </select>
+  <button onclick="criarUsuario()">Criar usuário</button>
+
+  <div id="listaAdmin"></div>
 </div>
 
 <script src="script.js"></script>
