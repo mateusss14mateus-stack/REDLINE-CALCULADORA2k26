@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Redline - Calculadora Mecânica</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🔧 REDLINE</h1>
+  <h2>Calculadora de Mecânica</h2>
+
+  <div class="box">
+    <label><input type="checkbox" value="50000"> Turbo (50K)</label>
+    <label><input type="checkbox" value="60000"> Transmissão N1 (60K)</label>
+    <label><input type="checkbox" value="80000"> Transmissão N2 (80K)</label>
+    <label><input type="checkbox" value="100000"> Transmissão N3 (100K)</label>
+
+    <label><input type="checkbox" value="20000"> Freio N1 (20K)</label>
+    <label><input type="checkbox" value="40000"> Freio N2 (40K)</label>
+    <label><input type="checkbox" value="60000"> Freio N3 (60K)</label>
+
+    <label><input type="checkbox" value="1500000"> Blindagem Full (1.5M)</label>
+    <label><input type="checkbox" value="350000"> Full Tuning (350K)</label>
+    <label><input type="checkbox" value="900000"> Remap (900K)</label>
+  </div>
+
+  <div class="total">
+    Total: <span id="total">R$ 0</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
